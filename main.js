@@ -60,6 +60,15 @@ const desiredCaptureInterval = 1000 / 60; // 60 frames per second
 
 document.addEventListener('DOMContentLoaded', async () => {
     await GPU.setupWebGPU('canvas');
+    // Cargar preset 1 al iniciar
+    try {
+        const response = await fetch('presets/1.json');
+        if (!response.ok) throw new Error('No se pudo cargar el preset por defecto');
+        const params = await response.json();
+        applyParams(params);
+    } catch (err) {
+        alert('Error cargando preset por defecto: ' + err);
+    }
     initializeUIValues();
     addEventListeners();
     setRecordingUI('stopped');
