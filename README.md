@@ -6,6 +6,8 @@ In CellFlow, it have been introduced core algorithmic differences that evolve th
 
 I have documented all the changes of the core algoridtms in this video:
 
+https://www.youtube.com/watch?v=E8vvSu8PZmI
+
 You can play with the CellFlow simulator directly on the web
 
 https://spherical-sound-society.github.io/CellFlow/
