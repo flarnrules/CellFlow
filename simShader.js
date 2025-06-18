@@ -82,7 +82,7 @@ fn main(@builtin(global_invocation_id) id: vec3u) {
   // Para forceMultiplier = 0: min_force_mult = 1.0, max_force_mult = 1.0
   // Para forceMultiplier = 1: min_force_mult = 0.0, max_force_mult = 2.0
   let min_force_mult = mix(1.0, 0.01, simParams.balance);
-  let max_force_mult = mix(1.0, 2.0, simParams.balance);
+  let max_force_mult = mix(1.0, 4.0, simParams.balance);
 
   let adaptive_multiplier = mix(max_force_mult, min_force_mult, clamped_normalized_density);
   var vel = me.vel * simParams.friction;
